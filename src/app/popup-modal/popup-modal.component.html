@@ -1,0 +1,8 @@
+<ng-container *ngIf="popup$ | async as popup">
+    <div class="popup" [ngClass]="{'open': popup === 'open'}">
+      <div class='body'(click)="$event.stopPropagation()">
+       <ng-content>
+       </ng-content>
+      </div>
+    </div>
+  </ng-container>

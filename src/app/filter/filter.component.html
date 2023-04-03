@@ -1,0 +1,4 @@
+<select (change)="valueChanges($event)">
+    <option selected value="default">Select {{filterType}}</option>
+    <option *ngFor="let option of filterOptions" [value]="option.value">{{option.name}} {{filterType}}</option>
+</select>
