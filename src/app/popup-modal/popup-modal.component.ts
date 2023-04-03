@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { PopupModalService } from '../services/popup-modal.service';
 
-
 @Component({
   selector: 'app-popup-modal',
   templateUrl: './popup-modal.component.html',
@@ -11,12 +10,9 @@ import { PopupModalService } from '../services/popup-modal.service';
 export class PopupModalComponent {
   popup$: Observable<string> = new Observable();
 
-  constructor(
-    private popupModalService: PopupModalService ) {}
+  constructor(private popupModalService: PopupModalService) {}
 
   ngOnInit() {
     this.popup$ = this.popupModalService.listine();
   }
-
- 
 }
